@@ -47,7 +47,24 @@ Given an input sketch and its class label, MaskSketch samples realistic images t
 </br>
 <h2 align="center">Abstract</h2>
 </br>
-<div style="font-size:14px"><p align="justify"> In the era of deep learning, human pose estimation from multiple cameras with unknown calibration has received little attention to date. We show how to train a neural model to perform this task with high precision and minimal latency overhead. The proposed model takes into account joint location uncertainty due to occlusion from multiple views, and requires only 2D keypoint data for training. Our method outperforms both classical bundle adjustment and weakly-supervised monocular 3D baselines on the well-established Human3.6M dataset, as well as the more challenging in-the-wild Ski-Pose PTZ dataset. </p></div>
+<div style="font-size:14px"><p align="justify"> Recent conditional image generation methods produce images of
+   remarkable diversity, fidelity and realism. However, the majority
+   of these methods allow conditioning only on labels or text prompts,
+   which limits their level of control over the generation result. In
+   this paper, we introduce MaskSketch, an image generation
+   method that allows spatial conditioning of the generation result
+   using a guiding sketch as an extra conditioning signal during sampling. MaskSketch
+   utilizes a pre-trained masked generative transformer, requiring no model
+   training or paired supervision, and works with input sketches of
+   different levels of abstraction. 
+   We show that intermediate self-attention maps of a masked generative transformer encode important structural information of the input image, such as scene layout and object shape, and we propose a novel sampling method based on this observation to enable structure-guided generation.  Our results show that
+   MaskSketch achieves high image realism and fidelity to the guiding
+   structure. Evaluated on standard benchmark datasets, MaskSketch
+   outperforms state-of-the-art methods for sketch-to-image
+   translation, as well as unpaired image-to-image translation
+   approaches.
+	
+	</p></div>
 
 </br>
 </br>
